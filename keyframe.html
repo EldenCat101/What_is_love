@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyFrame</title>
+    
+</head>
+
+<style>
+    .container{
+        display:flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .card-box{
+        background: cyan;
+        padding: 25px;
+        width: 200px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card-box h3{
+        color: antiquewhite;
+        margin-top: 0;
+        display: flex;
+    }
+
+    .icon-box{
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+        color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    @keyframes fadeIn{
+        from{
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .anim-fade-in{
+        animation: fadeIn 2s infinite alternate;
+    }
+
+    @keyframes pulse{
+        0%{
+            transform: scale(1);
+        }
+
+        50%{
+            transform: scale(2);
+        }
+
+        100%{
+           transform: scale(1);
+        }
+    }
+
+    .pulse{
+        animation: pulse 1.2s infinite;
+    }
+
+    @keyframes rotate{
+        from{
+            rotate: 0deg;
+        }
+
+        to{
+            rotate: 360deg;
+        }
+    }
+
+    .rotate{
+        animation: rotate 1.2s infinite;
+    }
+
+    @keyframes test{
+        0%{
+            transform: skew(1);
+        }
+        50%{
+            transform: skew(5);
+        }
+        100%{
+            transform: skew(1);
+        }
+    }
+
+    .test{
+        animation: test 1.2s infinite;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="card-box">
+            <h3>Joe</h3>
+            <div class="icon-box anim-fade-in">mama</div>
+        </div>
+
+        <div class="card-box">
+            <div class="icon-box pulse">Miku</div>
+        </div>
+
+        <div class="card-box">
+            <div class="icon-box rotate">Hello</div>
+        </div>
+
+        <div class="card-box">
+            <div class="icon-box test">bye</div>
+        </div>
+
+        <div class="card-box">
+            <div class="icon-box">Miiiiiiiii</div>
+        </div>
+    </div>
+
+</body>
+</html>
